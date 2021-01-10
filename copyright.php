@@ -1,13 +1,16 @@
 <?php if(!defined('__TYPECHO_ADMIN__')) exit; ?>
-<div class="typecho-foot" role="contentinfo">
-    <div class="copyright">
-        <a href="http://typecho.org" class="i-logo-s">Typecho</a>
-        <p><?php _e('由 <a href="http://typecho.org">%s</a> 强力驱动, 版本 %s (%s)', $options->software, $prefixVersion, $suffixVersion); ?></p>
-    </div>
-    <nav class="resource">
-        <a href="http://docs.typecho.org"><?php _e('帮助文档'); ?></a> &bull;
-        <a href="http://forum.typecho.org"><?php _e('支持论坛'); ?></a> &bull;
-        <a href="https://github.com/typecho/typecho/issues"><?php _e('报告错误'); ?></a> &bull;
-        <a href="http://extends.typecho.org"><?php _e('资源下载'); ?></a>
-    </nav>
+<!-- 底部版权等信息 -->
 </div>
+<footer class="footer">
+	<div class="d-sm-flex justify-content-center justify-content-sm-between">
+		<span class="text-muted text-center text-sm-left d-block d-sm-inline-block">
+			<a href="http://docs.typecho.org">帮助文档</a> &bull;
+			<a href="http://forum.typecho.org">支持论坛</a> &bull;
+			<a href="https://github.com/typecho/typecho/issues">报告错误</a> &bull;
+			<a href="http://extends.typecho.org">资源下载</a> &bull;
+			<a href="https://github.com/BootstrapDash/PurpleAdmin-Free-Admin-Template">源项目</a>
+			</span>
+		<span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Copyright © 2020</span>
+			
+	</div>
+</footer>

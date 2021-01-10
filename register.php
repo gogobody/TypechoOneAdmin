@@ -3,8 +3,6 @@ include 'common.php';
 
 if ($user->hasLogin() || !$options->allowRegister) {
     $response->redirect($options->siteUrl);
-}else{
-    header("Location: /tepass/signin");
 }
 $rememberName = htmlspecialchars(Typecho_Cookie::get('__typecho_remember_name'));
 $rememberMail = htmlspecialchars(Typecho_Cookie::get('__typecho_remember_mail'));

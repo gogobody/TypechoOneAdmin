@@ -100,10 +100,6 @@
                     t.attr('target', '_blank');
                 });
             }
-
-            $('.main form').submit(function () {
-                $('button[type=submit]', this).attr('disabled', 'disabled');
-            });
         });
     })();
 </script>
