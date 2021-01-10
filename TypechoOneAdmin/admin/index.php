@@ -17,9 +17,9 @@ $stat = Typecho_Widget::widget('Widget_Stat');
                 <div class="card-body">
                     <p>插件是基于泽泽社长（qqdie）和 yn-zxj(github) 的purple 后台修改。完全免费开源，插件下载反馈地址：<a href="https://github.com/gogobody/TypechoOneAdmin">github</a></p>
                     <p>提醒：虽然理论上不会对您的文件产生任何影响，但是还是建议您备份 typehco 根目录的admin 目录，以防止typecho版本带来的影响</p>
+                    <p>提醒：插件安装完成之后需要刷新缓存生效！！！</p>
                     <p>插件支持登录样式修改以及后台样式修改。</p>
                     <p>欢迎光临我的小站：<a href="https://ijkxs.com">即刻学术</a></p>
-
                 </div>
             </div>
         </div>
