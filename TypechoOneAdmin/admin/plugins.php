@@ -37,11 +37,11 @@ include 'menu.php';
 						<td><?php $activatedPlugins->version(); ?></td>
 						<td><?php echo empty($activatedPlugins->homepage) ? $activatedPlugins->author : '<a href="' . $activatedPlugins->homepage
 						. '">' . $activatedPlugins->author . '</a>'; ?></td>
-						<td>
+						<td style="white-space: nowrap;">
 							<?php if ($activatedPlugins->activate || $activatedPlugins->deactivate || $activatedPlugins->config || $activatedPlugins->personalConfig): ?>
 								<?php if ($activatedPlugins->config): ?>
 									<a href="<?php $options->adminUrl('options-plugin.php?config=' . $activatedPlugins->name); ?>"><?php _e('设置'); ?></a>
-									&bull;
+
 								<?php endif; ?>
 								<a lang="<?php _e('你确认要禁用插件 %s 吗?', $activatedPlugins->name); ?>" href="<?php $security->index('/action/plugins-edit?deactivate=' . $activatedPlugins->name); ?>"><?php _e('禁用'); ?></a>
 							<?php else: ?>

@@ -8,7 +8,7 @@ Typecho_Widget::widget('Widget_Contents_Page_Edit')->to($page);
 
 <form class="row" role="form" action="<?php $security->index('/action/contents-page-edit'); ?>" method="post" name="write_page">
 
-  <div class="col-md-9 grid-margin stretch-card" role="main">
+  <div class="grid-margin stretch-card" role="main" style="flex:9">
 	<div class="card">
 	  <div class="card-body">
 		<h4 class="card-title"><?php include 'page-title.php'; ?></h4>
@@ -56,7 +56,7 @@ Typecho_Widget::widget('Widget_Contents_Page_Edit')->to($page);
 	</div>
   </div>
   
-  <div id="edit-secondary" class="col-md-3 grid-margin stretch-card" role="complementary">
+  <div id="edit-secondary" class="grid-margin stretch-card" role="complementary" style="flex:3">
 	<div class="card">
 	  <div class="card-body">
 		<ul class="typecho-option-tabs clearfix">

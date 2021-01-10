@@ -214,7 +214,7 @@ class TypechoOneAdmin_Plugin implements Typecho_Plugin_Interface
             echo $hed;
         }else{
             /* 添加 purple style */
-            $hed = $hed . '<link rel="stylesheet" href="' . $url . 'assets/css/style.css?v=' . $suffixVersion.'">';
+            $hed = $hed . '<link rel="stylesheet" href="' . $url . 'assets/css/style.min.css?v=' . $suffixVersion.'">';
             $hed = $hed.'<link rel="stylesheet" href="' . $url . 'assets/vendors/mdi/css/materialdesignicons.min.css?v=' . $suffixVersion.'">';
             $hed = $hed.'<link rel="stylesheet" href="' . $url . 'assets/vendors/css/vendor.bundle.base.css?v=' . $suffixVersion.'">';
             $hed = $hed.'<script src="' . $url . 'assets/vendors/js/vendor.bundle.base.js?v=' . $suffixVersion.'"></script>';

@@ -118,6 +118,7 @@ input[type=text], input[type=password], input[type=email], textarea {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
+    width: 100%;
 }
 
 textarea {
@@ -2146,6 +2147,8 @@ button.btn.primary {
     line-height: 1.8;
     color: #ffffff;
     border-radius: 20px;
+    width: auto;
+    padding: 5px 20px;
 }
 
 #wmd-editarea {
@@ -4588,6 +4591,7 @@ select {
 
 select {
     word-wrap: normal;
+    width: 100%;
 }
 
 button,
@@ -13117,10 +13121,6 @@ button.bg-dark:focus {
     width: 75% !important;
 }
 
-.w-100 {
-    width: 100% !important;
-}
-
 .w-auto {
     width: auto !important;
 }
@@ -19504,8 +19504,6 @@ dl li {
 .table td {
     vertical-align: middle;
     font-size: 0.875rem;
-    line-height: 1;
-    white-space: nowrap;
 }
 
 .table th .badge,
@@ -20736,6 +20734,7 @@ dl li {
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
+    overflow: auto;
 }
 
 @media (max-width: 991px) {
@@ -20762,7 +20761,6 @@ h2 a {
     color: white;
 }
 
-/*��������������*/
 ::-webkit-scrollbar {
     width: 5px;
     height: 5px;
@@ -20771,22 +20769,39 @@ h2 a {
 ::-webkit-scrollbar-track {
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3) inset;
 
-    /*�������ı��������Բ��*/
     border-radius: 10px;
 
-    /*�������ı�����ɫ*/
     background-color: #ddd;
 }
 
 ::-webkit-scrollbar-thumb {
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3) inset;
 
-    /*��������Բ��*/
     border-radius: 10px;
 
-    /*�������ı�����ɫ*/
     background-color: #4d7cff;
     background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
 }
 
+/* add style */
+.main.card{
+    padding:1em;
+}
+.fullscreen{
+    #edit-secondary{
+        display: none;
+    }
 
+}
+
+@media (max-width: 992px) {}
+
+@media (max-width: 768px) {
+    .content-wrapper{
+        padding: 0.75rem 1.25rem;
+    }
+}
+
+@media (max-width: 576px) {
+
+}

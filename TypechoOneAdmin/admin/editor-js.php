@@ -11,7 +11,8 @@ $(document).ready(function () {
         preview = $('<div id="wmd-preview" class="wmd-hidetab" />').insertAfter('.editor');
 
     var options = {}, isMarkdown = <?php echo intval($content->isMarkdown || !$content->have()); ?>;
-
+    const screenWidth  = window.screen.width;
+    const screenHeight = window.screen.height;
     options.strings = {
         bold: '<?php _e('加粗'); ?> <strong> Ctrl+B',
         boldexample: '<?php _e('加粗文字'); ?>',
@@ -241,18 +242,34 @@ $(document).ready(function () {
         th = textarea.height();
         ph = preview.height();
         $(document.body).addClass('fullscreen');
-        var h = $(window).height() - toolbar.outerHeight();
-        
-        textarea.css('height', h);
-        preview.css('height', h);
+        // var h = $(window).height() - toolbar.outerHeight();
+        var windowHeight = $(window).height()
+        var navheight = $("nav.navbar").height()
+        var content_wrapper = $(".content-wrapper")
+        var wapper_padding = content_wrapper.innerWidth()-content_wrapper.width();
+        var toolbarHeight = $("#wmd-button-bar").outerHeight()
+        var submitHeight = $("p.submit").outerHeight()
+        var h1 = windowHeight - navheight - wapper_padding*2 - toolbarHeight
+        var h2 = windowHeight - navheight - wapper_padding*2 - submitHeight
+
+        textarea.css('height', h1);
+        preview.css('height', h2);
     });
 
     editor.hooks.chain('enterFullScreen', function () {
         $(document.body).addClass('fullscreen');
         
-        var h = window.screen.height - toolbar.outerHeight();
-        textarea.css('height', h);
-        preview.css('height', h);
+        // var h = window.screen.height - toolbar.outerHeight();
+
+        var navheight = $("nav.navbar").height()
+        var content_wrapper = $(".content-wrapper")
+        var wapper_padding = content_wrapper.innerWidth()-content_wrapper.width();
+        var toolbarHeight = $("#wmd-button-bar").outerHeight()
+        var submitHeight = $("p.submit").outerHeight()
+        var h1 = screenHeight - navheight - wapper_padding*2 - toolbarHeight
+        var h2 = screenHeight - navheight - wapper_padding*2 - submitHeight
+        textarea.css('height', h1);
+        preview.css('height', h2);
     });
 
     editor.hooks.chain('exitFullScreen', function () {
